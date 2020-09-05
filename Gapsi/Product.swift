@@ -9,9 +9,11 @@
 import Foundation
 
 struct Product: Decodable {
-    let id: Int
-    let title: String
-    let price: Int
-    let location: String
-    let image: String
+    let productId: Int
+    let productDisplayName: String
+    let listPrice: Int
+    let seller: String
+    let smImage: String
+    let lgImage: String
+    let xlImage: String
 }
