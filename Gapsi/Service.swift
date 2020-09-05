@@ -11,7 +11,7 @@ import Foundation
 class Service: NSObject {
     static let shared = Service()
     
-    func fetchProducts(search:String, initPage:Int, items:Int, completion: @escaping ([Product]?, Error?) -> ()) {
+    func fetchProducts(search:String, initPage:Int, items:Int, completion: @escaping (Products?, Error?) -> ()) {
         let urlString = "https://shoppapp.liverpool.com.mx/appclienteservices/services/v3/plp?force-plp=true&search-string=\(search)&page-number=\(initPage)&number-of-items-per-page=\(items)"
         
         guard let url = URL(string: urlString) else { return }
@@ -24,9 +24,10 @@ class Service: NSObject {
             
             guard let data = data else { return }
             do {
-                let products = try JSONDecoder().decode([Product].self, from: data)
+                let jsondata = try JSONDecoder().decode(Products.self, from: data)
+                
                 DispatchQueue.main.async {
-                    completion(products, nil)
+                    completion(jsondata, nil)
                 }
             } catch let jsonErr {
                 print("Failed to decode:", jsonErr)
