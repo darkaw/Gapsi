@@ -68,6 +68,8 @@
 		6E20475A2504009A00B33030 /* Gapsi */ = {
 			isa = PBXGroup;
 			children = (
+				6E204774250401CD00B33030 /* Product.swift */,
+				6E20477E25041EE500B33030 /* Model */,
 				6E20475B2504009A00B33030 /* AppDelegate.swift */,
 				6E20475D2504009A00B33030 /* SceneDelegate.swift */,
 				6E2047762504041C00B33030 /* ProductsController.swift */,
@@ -78,11 +80,17 @@
 				6E20476C2504009E00B33030 /* Info.plist */,
 				6E2047642504009A00B33030 /* Gapsi.xcdatamodeld */,
 				6E204772250400E100B33030 /* Service.swift */,
-				6E204774250401CD00B33030 /* Product.swift */,
 				6E20477A2504064D00B33030 /* ProductsCell.swift */,
 				6E20477C25040BF900B33030 /* ViewController.swift */,
 			);
 			path = Gapsi;
+			sourceTree = "<group>";
+		};
+		6E20477E25041EE500B33030 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
