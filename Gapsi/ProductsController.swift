@@ -9,6 +9,7 @@
 import UIKit
 class ProductsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
+    @IBOutlet weak var textSearch: UITextField!
     @IBOutlet weak var tableProducts:UITableView!
     
     var products = [Record]()
@@ -19,11 +20,11 @@ class ProductsController: UIViewController, UITableViewDelegate, UITableViewData
         tableProducts.delegate = self
         tableProducts.dataSource = self
         initialSetup()
-        fetchData()
+        fetchData(product: "juguete")
     }
     
-    fileprivate func fetchData() {
-        Service.shared.fetchProducts(search: "bicicleta", initPage: 1, items: 10) { (products, error) in
+    fileprivate func fetchData(product:String) {
+        Service.shared.fetchProducts(search: product, initPage: 1, items: 10) { (products, error) in
             if let err = error {
                 print("Failed to fetch product:", err)
                 return
@@ -42,9 +43,15 @@ class ProductsController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableProducts.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ProductsCell
         let product = products[indexPath.row]
+        let pictureURL = URL(string: product.smImage)!
+        let pictureData = NSData(contentsOf: pictureURL as URL)
+        let image = UIImage(data: pictureData! as Data)
        
-        cell.labelPrice.text = "$\(product.listPrice)"
+        
+        cell.labelPrice.text = "Precio : $\(product.listPrice)"
         cell.labelTitle.text = product.productDisplayName
+        cell.labelPlace.text = product.seller
+        cell.img.image = image
         return cell
     }
     
@@ -54,7 +61,13 @@ class ProductsController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-
+    @IBAction func editingDidEnd(_ sender: Any) {
+        fetchData(product: textSearch.text!)
+    }
+    
+    @IBAction func pressBtnSearch(_ sender: Any) {
+        fetchData(product: textSearch.text!)
+    }
     
 }
 

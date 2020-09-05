@@ -10,6 +10,8 @@ import UIKit
 
 class ProductsCell: UITableViewCell {
     @IBOutlet weak var labelTitle: UILabel!
-   @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var labelPlace: UILabel!
+    @IBOutlet weak var img: UIImageView!
     
 }
