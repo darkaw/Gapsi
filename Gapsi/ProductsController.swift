@@ -8,7 +8,7 @@
 
 import UIKit
 class ProductsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+   
     @IBOutlet weak var tableProducts:UITableView!
     
     var products = [Record]()
@@ -54,7 +54,7 @@ class ProductsController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
-   
+
     
 }
 
