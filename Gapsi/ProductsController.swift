@@ -58,7 +58,7 @@ class ProductsController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     fileprivate func initialSetup(){
-        
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func editingDidEnd(_ sender: Any) {
@@ -69,7 +69,18 @@ class ProductsController: UIViewController, UITableViewDelegate, UITableViewData
         fetchData(product: textSearch.text!)
     }
     
+  
 }
 
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer =     UITapGestureRecognizer(target: self, action:    #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 
