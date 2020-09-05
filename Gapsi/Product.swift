@@ -8,12 +8,20 @@
 
 import Foundation
 
-struct Product: Decodable {
+struct Products: Decodable {
+    let status: String
+    let pageType: Int
+    let plpResults: PlpResults
+}
+
+struct PlpResults: Decodable {
+    let records: [Record]
+}
+
+struct Record: Decodable {
     let productId: Int
     let productDisplayName: String
     let listPrice: Int
     let seller: String
-    let smImage: String
-    let lgImage: String
-    let xlImage: String
+    let smImage, lgImage, xlImage: String
 }
