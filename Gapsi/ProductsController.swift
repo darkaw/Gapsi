@@ -43,15 +43,7 @@ class ProductsController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableProducts.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ProductsCell
         let product = products[indexPath.row]
-        let pictureURL = URL(string: product.smImage)!
-        let pictureData = NSData(contentsOf: pictureURL as URL)
-        let image = UIImage(data: pictureData! as Data)
-       
-        
-        cell.labelPrice.text = "Precio : $\(product.listPrice)"
-        cell.labelTitle.text = product.productDisplayName
-        cell.labelPlace.text = product.seller
-        cell.img.image = image
+        cell.configureWithItem(item: product)
         return cell
     }
     

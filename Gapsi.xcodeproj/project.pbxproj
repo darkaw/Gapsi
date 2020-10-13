@@ -17,7 +17,18 @@
 		6E204775250401CD00B33030 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E204774250401CD00B33030 /* Product.swift */; };
 		6E2047772504041C00B33030 /* ProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2047762504041C00B33030 /* ProductsController.swift */; };
 		6E20477B2504064D00B33030 /* ProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E20477A2504064D00B33030 /* ProductsCell.swift */; };
+		6EF296EC250A9C1200757F3F /* GapsiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF296EB250A9C1200757F3F /* GapsiTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6EF296EE250A9C1200757F3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E2047502504009900B33030 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E2047572504009A00B33030;
+			remoteInfo = Gapsi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6E2047582504009A00B33030 /* Gapsi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gapsi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +43,20 @@
 		6E204774250401CD00B33030 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		6E2047762504041C00B33030 /* ProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsController.swift; sourceTree = "<group>"; };
 		6E20477A2504064D00B33030 /* ProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCell.swift; sourceTree = "<group>"; };
+		6EF296E9250A9C1200757F3F /* GapsiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GapsiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EF296EB250A9C1200757F3F /* GapsiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GapsiTests.swift; sourceTree = "<group>"; };
+		6EF296ED250A9C1200757F3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6E2047552504009A00B33030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EF296E6250A9C1200757F3F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				6E20475A2504009A00B33030 /* Gapsi */,
+				6EF296EA250A9C1200757F3F /* GapsiTests */,
 				6E2047592504009A00B33030 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				6E2047582504009A00B33030 /* Gapsi.app */,
+				6EF296E9250A9C1200757F3F /* GapsiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +102,15 @@
 			path = Gapsi;
 			sourceTree = "<group>";
 		};
+		6EF296EA250A9C1200757F3F /* GapsiTests */ = {
+			isa = PBXGroup;
+			children = (
+				6EF296EB250A9C1200757F3F /* GapsiTests.swift */,
+				6EF296ED250A9C1200757F3F /* Info.plist */,
+			);
+			path = GapsiTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,6 +131,24 @@
 			productReference = 6E2047582504009A00B33030 /* Gapsi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6EF296E8250A9C1200757F3F /* GapsiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EF296F2250A9C1200757F3F /* Build configuration list for PBXNativeTarget "GapsiTests" */;
+			buildPhases = (
+				6EF296E5250A9C1200757F3F /* Sources */,
+				6EF296E6250A9C1200757F3F /* Frameworks */,
+				6EF296E7250A9C1200757F3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EF296EF250A9C1200757F3F /* PBXTargetDependency */,
+			);
+			name = GapsiTests;
+			productName = GapsiTests;
+			productReference = 6EF296E9250A9C1200757F3F /* GapsiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +161,10 @@
 				TargetAttributes = {
 					6E2047572504009A00B33030 = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					6EF296E8250A9C1200757F3F = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 6E2047572504009A00B33030;
 					};
 				};
 			};
@@ -128,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				6E2047572504009A00B33030 /* Gapsi */,
+				6EF296E8250A9C1200757F3F /* GapsiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +195,13 @@
 				6E20476B2504009E00B33030 /* LaunchScreen.storyboard in Resources */,
 				6E2047682504009E00B33030 /* Assets.xcassets in Resources */,
 				6E2047632504009A00B33030 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EF296E7250A9C1200757F3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +222,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EF296E5250A9C1200757F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EF296EC250A9C1200757F3F /* GapsiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6EF296EF250A9C1200757F3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E2047572504009A00B33030 /* Gapsi */;
+			targetProxy = 6EF296EE250A9C1200757F3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6E2047612504009A00B33030 /* Main.storyboard */ = {
@@ -332,6 +410,46 @@
 			};
 			name = Release;
 		};
+		6EF296F0250A9C1200757F3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VMR27TE8QJ;
+				INFOPLIST_FILE = GapsiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lca.GapsiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gapsi.app/Gapsi";
+			};
+			name = Debug;
+		};
+		6EF296F1250A9C1200757F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VMR27TE8QJ;
+				INFOPLIST_FILE = GapsiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lca.GapsiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gapsi.app/Gapsi";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -349,6 +467,15 @@
 			buildConfigurations = (
 				6E2047702504009E00B33030 /* Debug */,
 				6E2047712504009E00B33030 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EF296F2250A9C1200757F3F /* Build configuration list for PBXNativeTarget "GapsiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EF296F0250A9C1200757F3F /* Debug */,
+				6EF296F1250A9C1200757F3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

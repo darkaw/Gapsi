@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Products: Codable {
+struct Product: Codable {
     let status: Status
     let pageType: String
     let plpResults: PlpResults

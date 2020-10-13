@@ -14,4 +14,17 @@ class ProductsCell: UITableViewCell {
     @IBOutlet weak var labelPlace: UILabel!
     @IBOutlet weak var img: UIImageView!
     
+   func configureWithItem(item: Record) {
+    labelTitle?.text = item.productDisplayName
+       
+       let pictureURL = URL(string: item.smImage)!
+       let pictureData = NSData(contentsOf: pictureURL as URL)
+       let image = UIImage(data: pictureData! as Data)
+      
+       
+       labelPrice.text = "Precio : $\(item.listPrice)"
+       labelTitle.text = item.productDisplayName
+       labelPlace.text = item.seller
+       img.image = image
+   }
 }
